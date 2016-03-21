@@ -82,9 +82,9 @@ struct Page {
 中定义了一系列的宏函数来简化对链表的操作。请阅读这些宏函数的代码，理解它们的原理和巧妙之处。
 
 \begin{thinking}\label{think-do_while}
-我们注意到我们把宏函数的函数体写成了 \mintinline{c}|do { // ... } while(0)| 的形式，而不是
+我们注意到我们把宏函数的函数体写成了 \mintinline{c}|do { /* ... */ } while(0)| 的形式，而不是
 仅仅写成形如
-\mintinline{c}|{// ... }| 的语句块，这样的写法好处是什么？
+\mintinline{c}|{/* ... */ }| 的语句块，这样的写法好处是什么？
 \end{thinking}
 
 在 include/pmap.h 中，我们使用 LIST\_HEAD 宏来定义了一个结构体类型 Page\_list ，在 mm/pmap.c 
